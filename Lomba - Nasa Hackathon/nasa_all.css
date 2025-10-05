@@ -1,0 +1,572 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #190808;
+  color: #333;
+  background-image: url("Home.jpg");
+}
+
+header {
+  background: linear-gradient(135deg, #7dd3fc 0%, #93c5fd 100%);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.logo-will {
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.logo-rain {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+nav a {
+  color: #1e293b;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #0f172a;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #1e293b;
+  transition: 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+.mobile-menu-content {
+  background: #7dd3fc;
+  border-radius: 50%;
+  width: 400px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  color: #1e293b;
+}
+
+.mobile-menu a {
+  color: #1e293b;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.hero {
+  background: linear-gradient(
+    135deg,
+    rgba(45, 55, 72, 0.95) 0%,
+    rgba(30, 41, 59, 0.9) 100%
+  );
+  border-radius: 15px;
+  padding: 80px 40px;
+  text-align: center;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: #7dd3fc;
+  color: #1e293b;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: #93c5fd;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(125, 211, 252, 0.4);
+}
+
+.about-section {
+  background: linear-gradient(135deg, #64748b 0%, #94a3b8 100%);
+  border-radius: 15px;
+  padding: 60px 40px;
+  color: white;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+.map-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 12px 20px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-bar button {
+  padding: 12px 20px;
+  background: #7dd3fc;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.btn-location {
+  padding: 12px 20px;
+  background: #34d399;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+#map {
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+/* NASA Data Input Section */
+.nasa-input-section {
+  background: #f8fafc;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.nasa-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nasa-header h3 {
+  color: #1e293b;
+  font-size: 20px;
+}
+
+.nasa-badge {
+  background: linear-gradient(135deg, #7dd3fc 0%, #93c5fd 100%);
+  color: #1e293b;
+  padding: 5px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.input-group input,
+.input-group select {
+  padding: 10px;
+  border: 2px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #7dd3fc;
+}
+
+.range-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.range-group label {
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.range-input {
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #e2e8f0;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.range-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #7dd3fc;
+  cursor: pointer;
+}
+
+.range-value-display {
+  text-align: center;
+  margin-top: 5px;
+  font-weight: 600;
+  color: #1e293b;
+  font-size: 14px;
+}
+
+.btn-predict {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #7dd3fc 0%, #93c5fd 100%);
+  color: #1e293b;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-predict:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(125, 211, 252, 0.4);
+}
+
+/* Results Section */
+.results-section {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  display: none;
+}
+
+.results-section.show {
+  display: block;
+}
+
+.results-header {
+  color: #1e293b;
+  font-size: 18px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.result-label {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.result-value {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Team Section */
+.team-section {
+  background: white;
+  border-radius: 15px;
+  padding: 60px 40px;
+}
+
+.team-section h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #1e293b;
+  text-align: center;
+}
+
+.team-subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border: 4px solid #7dd3fc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-info {
+  width: 100%;
+}
+
+.member-name {
+  color: #1e293b;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.member-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f8fafc;
+  transition: all 0.3s;
+  text-decoration: none;
+}
+
+.social-link.linkedin {
+  color: #0077b5;
+}
+
+.social-link.github {
+  color: #333;
+}
+
+.social-link.email {
+  color: #7dd3fc;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+  color: white;
+}
+
+.social-link.github:hover {
+  background: #333;
+  color: white;
+}
+
+.social-link.email:hover {
+  background: #7dd3fc;
+  color: white;
+}
+
+footer {
+  background: linear-gradient(135deg, #7dd3fc 0%, #93c5fd 100%);
+  padding: 20px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer-logo {
+  display: inline-flex;
+  flex-direction: column;
+  font-weight: bold;
+  color: #1e293b;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+  .member-name {
+    font-size: 14px;
+  }
+  .social-link {
+    width: 32px;
+    height: 32px;
+  }
+  .social-link svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}
