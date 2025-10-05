@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will It Rain - Home</title>
+    <link rel="stylesheet" href="homePage.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">WILL IT RAIN</div>
+            <nav>
+                <a href="home.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact Us</a>
+            </nav>
+            <div class="hamburger-menu">☰</div>
+        </div>
+    </header>
+
+    <main class="hero-section">
+        <div class="hero-content">
+            <h1>WILL IT RAIN</h1>
+            <p>Knows weather anytime, anywhere!</p>
+            <a href="maps.html" class="cta-button">Start Predicting</a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; WILL IT RAIN</p>
+        </div>
+    </footer>
+
+</body>
+</html>
