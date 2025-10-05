@@ -1275,6 +1275,7 @@
       function updatePredictionForDay(dateString) {
         if (!rangeDataCache.length) return;
         const dayData = rangeDataCache.find((d) => d.date === dateString);
+        if (rangeDataCache.length === 0) return "Invalid data";
         if (!dayData) {
           console.error("No data for date:", dateString);
           return;
